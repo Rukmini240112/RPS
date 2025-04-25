@@ -43,14 +43,14 @@ def isscissor():
 def display_result(player_choice, computer_choice):
     if player_choice == computer_choice:
         match_result = "Match Draw"
-    elif (player_choice == "Rock" and computer_choice == "Scissors") or 
-         (player_choice == "Scissors" and computer_choice == "Paper") or 
-         (player_choice == "Paper" and computer_choice == "Rock"):
+    elif (
+        (player_choice == "Rock" and computer_choice == "Scissor") or
+        (player_choice == "Scissor" and computer_choice == "Paper") or
+        (player_choice == "Paper" and computer_choice == "Rock")
+    ):
         match_result = "Player Win"
     else:
         match_result = "Computer Win"
-    
-    print(match_result)
 
     l4.config(text=f"Player: {player_choice}\nComputer: {computer_choice}\nResult: {match_result}")
     button_disable()
@@ -78,7 +78,7 @@ frame1 = Frame(root)
 frame1.pack()
 
 b1 = Button(frame1, text="Rock", font=10, width=7, command=isrock)
-b2 = Button(frame1, text="Paper ", font=10, width=7, command=ispaper)
+b2 = Button(frame1, text="Paper", font=10, width=7, command=ispaper)
 b3 = Button(frame1, text="Scissor", font=10, width=7, command=isscissor)
 
 b1.pack(side=LEFT, padx=10)
